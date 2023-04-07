@@ -1,0 +1,232 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+:root{
+
+  /* // ### Primary */
+  
+  --Red: hsl(0, 100%, 74%); 
+  --Green: hsl(154, 59%, 51%);
+  
+  /* // ### Accent */
+  
+  --Blue: hsl(248, 32%, 49%);
+  
+  /* // ### Neutral */
+  
+  --Dark-Blue: hsl(249, 10%, 26%); 
+  --Grayish-Blue: hsl(246, 25%, 77%);
+}
+
+html{
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+*{
+  margin: 0;
+  padding: 0;
+  outline: none;
+  box-sizing:inherit;
+  font-family: 'Poppins', sans-serif;
+}
+body{
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  text-align: center;
+  background-color: var(--Red);
+  color: #fff;
+}
+body::before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background:url(./images/bg-intro-mobile.png)no-repeat top;
+  background-size: cover;
+  z-index: -1;
+}
+
+.container{
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: center;
+  justify-content: center;
+  width: clamp(30rem,90%,110rem);
+  padding: 1rem;
+  margin: 3rem 0;
+  gap: clamp(3rem,3vw,4rem);
+}
+/* left section */
+.content{
+  animation:goingright 2.5s ease;
+}
+@keyframes goingright {
+  0%{
+    opacity: 0;
+    transform:translateX(-10rem);
+  }
+  50%{
+    opacity: 0.5;
+  }
+  100%{
+    opacity: 1;
+    transform:translateX(0);
+  }
+  
+}
+h1, p{
+  margin-bottom: clamp(2rem,2.5vw,2.5rem);
+}
+h1{
+  font-size: clamp(3rem,4.5vw,5rem);
+  font-weight: 700;
+}
+p{
+  font-size: 1.6rem;
+  line-height: 1.7;
+  font-weight: 400;
+}
+
+/* right section */
+.form-section{
+  animation:goingleft 2.5s ease;
+}
+@keyframes goingleft {
+  0%{
+    opacity: 0;
+    transform:translateX(10rem);
+  }
+  50%{
+    opacity: 0.5;
+  }
+  100%{
+    opacity: 1;
+    transform:translateX(0);
+  }
+  
+}
+form,.form-info{
+  border-radius: 1rem;
+  box-shadow: 1px 8px  rgba(0,0,0,0.15);
+}
+.form-info{
+  padding: 2rem 4rem;
+  background-color: var(--Blue);
+ 
+ 
+}
+.form-info .try{
+  font-weight: 700;
+  
+}
+/* form section */
+form{
+  background-color: #fff;
+  padding: clamp(2rem,2.5vw,4rem);
+ 
+}
+
+input::placeholder{
+  font-weight: 600;
+}
+
+input{
+  display: block;
+  width: 100%;
+  padding:clamp(1rem,1.5vw,1.5rem) 0 clamp(1rem,1.5vw,1.5rem) 2rem;
+  border:0.5px solid var(--Grayish-Blue);
+  border-radius: 5px;
+  margin-bottom: clamp(2.5rem,2.5vw,3rem);
+ 
+}
+.input-box.error input{
+  border:0.5px solid var(--Red);
+}
+.input-box.valid-error input{
+  border:0.5px solid var(--Red);
+}
+.input-box{
+  position: relative;
+}
+.input-box .icon-error{
+  position: absolute;
+  top:50%;
+  right:5%;
+  transform: translate(-50%,-50%);
+  display: none;
+}
+
+.error-message{
+  color: var(--Red);
+  font-size: clamp(1.2rem,1.5vw,1.6rem);
+  position: absolute;
+  bottom:-50%;
+  left: 0;
+  padding-left: 2rem;
+  display: none;
+}
+.error-character{
+  color: var(--Red);
+  font-size: clamp(1.2rem,1.5vw,1.6rem);
+  position: absolute;
+  bottom:-50%;
+  left: 0;
+  padding-left: 2rem;
+  display: none;
+}
+.input-box.error .icon-error,
+.input-box.error .error-message{
+  display: block;
+}
+.input-box.valid-error .icon-error{
+  display: block;
+}
+.input-box.valid-error .error-character{
+  display: block;
+}
+.btn-submit{
+  display: block;
+  width: 100%;
+  border: none;
+  border-radius: 5px;
+  background-color: var(--Green);
+  color: #fff;
+  padding: 1.5rem 3rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  font-size: clamp(1.6rem,2.5vw,2rem);
+  box-shadow: inset 1px -3px 5px hsl(154, 59%, 41%) ;
+  cursor: pointer;
+  margin-bottom: clamp(1.5rem,2vw,2rem);
+}
+.btn-submit:hover{
+  background-color:hsl(154, 59%, 61%);
+}
+.form-footer{
+  font-size: 1.2rem;
+  color: var(--Grayish-Blue);
+  padding: 0 1.5rem;
+  font-weight: 500;
+}
+.term{
+  font-weight: 700;
+  color: var(--Red);
+}
+
+@media (min-width:800px) {
+  body::before{
+    background:url(./images/bg-intro-desktop.png)no-repeat top;
+    background-size: cover;
+    z-index: -1;
+  }
+  .container{
+    grid-template-columns: repeat(2,1fr);
+  }
+  .content{
+    text-align: left;
+  }
+}
