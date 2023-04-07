@@ -155,7 +155,7 @@ input{
 .input-box .icon-error{
   position: absolute;
   top:50%;
-  right:5%;
+  right:1%;
   transform: translate(-50%,-50%);
   display: none;
 }
@@ -165,7 +165,7 @@ input{
   font-size: clamp(1.2rem,1.5vw,1.6rem);
   position: absolute;
   bottom:-50%;
-  left: 0;
+  right: 0;
   padding-left: 2rem;
   display: none;
 }
@@ -174,7 +174,7 @@ input{
   font-size: clamp(1.2rem,1.5vw,1.6rem);
   position: absolute;
   bottom:-50%;
-  left: 0;
+  right: 0;
   padding-left: 2rem;
   display: none;
 }
