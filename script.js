@@ -3,10 +3,7 @@
 const form = document.querySelector('.form');
 
 const input = document.querySelectorAll('input');
-const email =document.getElementById('email');
-const firstName = document.getElementById('first-name');
-const lastName = document.getElementById('last-name');
-const passWord = document.getElementById('password');
+
 
 
 form.addEventListener('submit', (e) => {
@@ -19,19 +16,13 @@ form.addEventListener('submit', (e) => {
     } 
     else{
       input[i].parentElement.classList.remove('error');
-      input[i].parentElement.classList.remove('valid-error');
       if(input[i].type === 'email'){
-        if(!input[i].value){
-          input[i].parentElement.classList.add('error');
-       
-        }else if(!isEmail(input[i].value)){
+        if(!isEmail(input[i].value)){
           input[i].parentElement.classList.add('valid-error');
-          
-         }else{
-      
-          input[i].parentElement.classList.remove('valid-error');
-         
-         }  
+        }else{
+            input[i].parentElement.classList.remove('valid-error');
+
+         }      
         }
 
       if(input[i].type === 'password'){
@@ -44,7 +35,6 @@ form.addEventListener('submit', (e) => {
         }
         
       }
- 
     }
   } 
 });
