@@ -140,7 +140,7 @@ input{
   padding:clamp(1rem,1.5vw,1.5rem) 0 clamp(1rem,1.5vw,1.5rem) 2rem;
   border:0.5px solid var(--Grayish-Blue);
   border-radius: 5px;
-  margin-bottom: clamp(2.5rem,2.5vw,3rem);
+  margin-bottom: clamp(2rem,2.5vw,2.5rem);
  
 }
 .input-box.error input{
@@ -149,22 +149,24 @@ input{
 .input-box.valid-error input{
   border:0.5px solid var(--Red);
 }
+
 .input-box{
   position: relative;
 }
-.input-box .icon-error{
+.icon-error{
   position: absolute;
   top:50%;
   right:1%;
   transform: translate(-50%,-50%);
   display: none;
+ 
 }
 
 .error-message{
   color: var(--Red);
-  font-size: clamp(1.2rem,1.5vw,1.4rem);
+  font-size: clamp(1rem,1.5vw,1.2rem);
   position: absolute;
-  bottom:-50%;
+  bottom:-40%;
   right: 0;
   padding-left: 2rem;
   display: none;
@@ -188,6 +190,7 @@ input{
 .input-box.valid-error .error-character{
   display: block;
 }
+
 .btn-submit{
   display: block;
   width: 100%;
@@ -211,6 +214,7 @@ input{
   color: var(--Grayish-Blue);
   padding: 0 1.5rem;
   font-weight: 500;
+  margin: 0;
 }
 .term{
   font-weight: 700;

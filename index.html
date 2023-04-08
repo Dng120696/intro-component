@@ -6,6 +6,7 @@
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="stylesheet" href="style.css">
+  <script src="https://kit.fontawesome.com/4a45b90c57.js" crossorigin="anonymous"></script>
   <title>Frontend Mentor | Intro component with sign up form</title>
 
 
@@ -36,12 +37,14 @@
           <input type="text" name="first-name" id="first-name" placeholder="First Name">
           <img src="./images/icon-error.svg" alt="icon" class="icon-error">
           <small class="error-message">First Name cannot be empty</small>
+          <small class="error-character">Must be only characters</small>
         </div>
           <!-- box2 -->
         <div class="input-box">
           <input type="text" name="last-name" id="last-name" placeholder="Last Name">
           <img src="./images/icon-error.svg" alt="icon" class="icon-error">
           <small class="error-message">Last Name cannot be empty</small>
+          <small class="error-character">Must be only characters</small>
         </div>
         <!-- box3 -->
         <div class="input-box">
@@ -54,6 +57,8 @@
         <div class="input-box">
         <input type="password" name="password" id="password"   placeholder="Password">
         <img src="./images/icon-error.svg" alt="icon" class="icon-error">
+
+
         <small class="error-message">Password cannot be empty</small>
         <small class="error-character">Password must contain atleast 6 characters</small>
       
